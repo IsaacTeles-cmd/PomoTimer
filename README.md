@@ -34,4 +34,4 @@ CSS (Estilos modulares e responsivos)
 
 Web APIs (Notification, Audio, localStorage)
 
-![Pomodoro Timer print](./pomodoro-timer/public/PomodoroTimer-print.png)
+![Pomodoro Timer print](image.png)
