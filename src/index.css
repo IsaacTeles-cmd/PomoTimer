@@ -1,0 +1,197 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('/Normal-mode-bg.png');
+    background-size: cover;
+    color: #2d3436;
+}
+
+.app {
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    background-color: transparent;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.timer {
+    font-size: 4.5rem;
+    margin: 1.5rem 0;
+    font-weight: 700;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -2px;
+    color: white;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #749484;
+    transform: translateY(-2px);
+}
+
+.task-section {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    margin-top: 0;
+}
+
+.task-section input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.task-section button {
+    padding: 10px 15px;
+    background: #749484;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.task-list {
+    margin: 15px 0;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.task-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.task-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.task-item input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #749484;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.task-item input[type="checkbox"]:checked {
+    background-color: #749484;
+    border-color: #749484;
+}
+
+.active-task {
+    border-left: 3px solid #749484;
+    background: hsla(150, 13%, 52%, 0.30)
+}
+
+.task-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.task-list::-webkit-scrollbar {
+    display: none;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.delete-task {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    margin-left: 10px;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.task-item:hover .delete-task {
+    opacity: 1;
+}
+
+.session-counter {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.completed-cycle {
+    color: #749484;
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .controls {
+        flex-wrap: wrap;
+    }
+    .controls button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    .delete-task {
+        opacity: 1;
+    }
+}
